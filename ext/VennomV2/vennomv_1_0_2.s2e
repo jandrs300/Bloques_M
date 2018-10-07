@@ -1,0 +1,297 @@
+{	"extensionName": "VennomV2",
+	"description": "A extention for robot Vennom",
+	"version" : "1.0.1",
+    "author" : "INSANI",
+    "homepage": "https://www.youtube.com/watch?v=eSSB-lpehxc&t=2s",
+	"sort":0,
+	"extensionPort": 0,
+	"firmware":"1.0",
+	"javascriptURL":"js/vennomv_1_0_2.js",
+	"blockSpecs": [
+		["h","Robot Vennom","runArduino",
+		{
+			"encode":"",
+			"setup":"",
+			"inc":"#include \"Vennom.h\"",
+			"def":"Vennom robot;\n",
+			"work":"",
+			"loop":""
+		}],
+       
+        ["w", "LED de Arduino %d.digital","onLedArdui","HIGH",
+		{"encode":"{d0}","setup":"pinMode(13,OUTPUT);\n","inc":"","def":"","work":"digitalWrite(13,{0});\n","loop":""}],
+
+		["w", "Color %d.color del LED RGB %d.digitalLED","onLed","Azul","On",
+		{"encode":"{d0}{d1}","setup":"pinMode({0},OUTPUT);\n","inc":"","def":"","work":"digitalWrite({0},{1});\n","loop":""}],
+
+		["w", "Intensidad LED Color R %d.pwmLED G %d.pwmLED B %d.pwmLED","onRGBPwm", "0", "255", "0",
+		{"encode":"{d0}{d1}{d2}","setup":" pinMode(3,OUTPUT);\n pinMode(5,OUTPUT);\n pinMode(6,OUTPUT);\n","inc":"","def":"","work":" analogWrite(6,{0});\n analogWrite(5,{1});\n analogWrite(3,{2});\n","loop":""}],
+
+        ["w", "BUZZER de Vennom %d.digital","onBuzzer","LOW",
+		{"encode":"{d0}","setup":"pinMode(11,OUTPUT);\n","inc":"","def":"","work":"digitalWrite(11,{0});\n","loop":""}],
+
+		["w", "Reproducir TONE  %d.notes tiempo %d.beats","onTone", "C4","Half",
+		{"encode":"{d0}{s1}","setup":"pinMode(11,OUTPUT);\n","inc":"","def":"","work":"tone(11,{0},{1}); // write to buzzer\ndelay({1});\n","loop":""}],
+
+		["w", "Reproducir CANCION  %d.canciones ","onCancion","Saludo",
+		{
+			"encode":"{d0}",
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"robot.Cantante({0});\n",
+			"loop":""
+		}],
+
+		["w", "Motor  DERECHO Pin 2 %d.digital Pin 4 %d.digital","onMotorD","LOW","LOW",
+		{"encode":"{d0}{d1}","setup":" pinMode(2,OUTPUT);\n pinMode(4,OUTPUT);\n","inc":"","def":"","work":"digitalWrite(2,{0});\n digitalWrite(4,{1});\n","loop":""}],
+
+		["w", "Motor  IZQUIERDO Pin 7 %d.digital Pin 12 %d.digital","onMotorI","LOW","LOW",
+		{"encode":"{d0}{d1}","setup":" pinMode(7,OUTPUT);\n pinMode(12,OUTPUT);\n","inc":"","def":"","work":"digitalWrite(7,{0});\n digitalWrite(12,{1});\n","loop":""}],
+
+		["w", 
+		"Motor  %d.motorSelec  accion %d.accionMotor",
+		"actMotor","Derecho","Adelante",
+		{
+			"encode":"{d0}{d1}",
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"robot.activarMotor({0},{1});\n",
+			"loop":""
+		}],
+
+		["w", 
+		"Mover Vennom hacia  %d.accionMotor ",
+		"onVennom","Adelante"
+		,
+		{
+			"encode":"{d0}",
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"robot.MoverVennom({0});\n",
+			"loop":""
+		}],
+
+		["w", 
+		"Girar Vennom  %n grados a la %d.motorSelec ",
+		"giroVennom","90","Derecho",
+		{
+			"encode":"{d0}{d1}",
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"robot.GiroVennom({0},{1});\n",
+			"loop":""
+		}],
+
+		["w", 
+		"Motor  %d.motorSelec  accion %d.accionMotor tiempo %n ms",
+		"actMotorT","Derecho","Adelante","1000",
+		{
+			"encode":"{d0}{d1}{d2}",
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"robot.MotorTiempo({0},{1},{2});\n",
+			"loop":""
+		}],
+
+		["R", "Leer sensor tacto ","getAnalog","0",
+		{"encode":"{d0}","setup":"pinMode(A0,INPUT);\n","inc":"","def":"","work":"analogRead(A0)","loop":""}],
+
+		["R", "Leer sensor ultrasonido Vennom ","getUltrasonicVennom","13","10",
+		{
+			"encode":"{d0}",
+			"setup":"","inc":"",
+			"def":"\nfloat getDistance(int trig,int echo){\npinMode(trig,OUTPUT);\ndigitalWrite(trig,LOW);\ndelayMicroseconds(2);\ndigitalWrite(trig,HIGH);\ndelayMicroseconds(10);\ndigitalWrite(trig,LOW);\npinMode(echo, INPUT);\nreturn pulseIn(echo,HIGH,30000)/58.0;\n}\n",
+			"work":"getDistance(13,10)",
+			"loop":""}],
+
+		["w","Saludo","saludar","","",
+		{
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"robot.Saludar();\n",
+			"loop":""
+		}],
+
+		["w","App Smartphone Android %d.robot","appMovil","Vennom","",
+		{
+			"encode":"{d0}",
+			"setup":"SerialBT.begin(115200);\n",
+			"inc":"",
+			"def":"SoftwareSerial SerialBT(9,8);\nchar ch = ' ';\nboolean b_programacion = false, b_control = false, b_distancia = false;",
+			"work":"\nif(SerialBT.available() > 0){\nch = SerialBT.read();\nif(b_programacion) robot.programacion(ch);\nelse if (b_control) robot.control(ch);\nif(ch == '?'){\ndelay(500);\nSerialBT.print({0});\nSerialBT.flush();\n}else if(ch == 'c'){\nSerialBT.flush();\nb_programacion = false;\nb_control = true;\n}else if(ch == 'p'){\ndelay(500);\nSerialBT.flush();\nb_programacion = true;\nb_control = false;\n}\n}",
+			"loop":""
+		}],
+
+		["b","(String)¿ %s es igual %s?","esIgual","","",
+		{
+			"setup":"Serial.begin(115200);\n",
+			"inc":"",
+			"def":"",
+			"work":"{0}.equals({1})",
+			"loop":""
+		}],
+
+		["b","¿Datos disponibles?","isAvailable",
+		{
+			"setup":"SerialBT.begin(115200);\n",
+			"inc":"",
+			"def":"SoftwareSerial SerialBT(9,8);\n",
+			"work":"SerialBT.available()>0",
+			"loop":""
+		}],
+
+		["R", "Leer Bluetooth", "serialReadBT",
+		{
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"SerialBT.read()",
+			"loop":""
+		}],
+
+
+		["w", "Bluetooth flush ", "BTflush",
+		{
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"SerialBT.flush();\n",
+			"loop":""
+		}],
+
+		["w", "Datos Brainwave ", "Brainwave",
+		{
+			"setup":"Serial.begin(57600);\n",
+			"inc":"",
+			"def":"\n#define LED 13\n#define DEBUGOUTPUT 0\nbyte generatedChecksum = 0;\nbyte checksum = 0;\nint payloadLength = 0;\nbyte payloadData[64] = {0};\nbyte poorQuality = 0;\nbyte attention = 0;\nbyte meditation = 0;\n// system variables\nlong lastReceivedPacket = 0;\nboolean fin_datos = false;\nboolean bigPacket = false;\n//...\nbyte ReadOneByte() {\nint ByteRead;\nwhile (!Serial.available());\n  ByteRead = Serial.read();\n#if DEBUGOUTPUT\n  Serial.print((char)ByteRead);\n#endif\n  return ByteRead;\n }\n//Funcion Datos\n//...\nvoid iniciar_datos_brain(){\nif (ReadOneByte() == 170) {\nif (ReadOneByte() == 170){\npayloadLength = ReadOneByte();\nif (payloadLength > 169)\nreturn; \ngeneratedChecksum = 0; \nfor (int i = 0; i < payloadLength; i++){\npayloadData[i] = ReadOneByte();\ngeneratedChecksum += payloadData[i]; \n} \nchecksum = ReadOneByte();\ngeneratedChecksum = 255 - generatedChecksum;\nif (checksum == generatedChecksum){\npoorQuality = 200; \nattention = 0; \nmeditation = 0; \nfor (int i = 0; i < payloadLength; i++){ \nswitch (payloadData[i]) { \ncase 2: \ni++; \npoorQuality = payloadData[i]; \nbigPacket = true; \nbreak; \ncase 4: \n i++; \nattention = payloadData[i]; \n break; \ncase 5: \n i++; // \nmeditation = payloadData[i]; \nbreak; //  \ncase 0x80: \ni = i + 3;\nbreak;//  \ncase 0x83: \ni = i + 25;\n break;//  \ndefault: \nbreak;//   \n } } \n#if !DEBUGOUTPUT \nif (bigPacket) { \nif (poorQuality == 0) \ndigitalWrite(LED, HIGH); \nelse \ndigitalWrite(LED, LOW); \nfin_datos = true; \n}//  \n#endif \nbigPacket = false;} \nelse{}}}} \n//fin \n",
+			"work":"iniciar_datos_brain();\n",
+			"loop":""
+		}],
+
+		["b","¿Datos Bainwave disponibles?","isAvailableBrain",
+		{
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"fin_datos",
+			"loop":""
+		}],
+
+		["w", "Bandera datos recibidos", "DatoRecibido",
+		{
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"\n fin_datos=false;\n",
+			"loop":""
+		}],
+
+		["R", "Datos de Calidad", "DatosCalidad",
+		{
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"poorQuality",
+			"loop":""
+		}],
+
+		["R", "Datos de Meditacion", "DatosMeditacion",
+		{
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"meditation",
+			"loop":""
+		}],
+		["R", "Datos de Atencion", "DatosAtencion",
+		{
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"attention",
+			"loop":""
+		}],
+
+		["w", "Escribir en el puerto Serial Brainwave %s", "serialWriteBrain", "helloBrain",
+		{
+			"setup":"",
+			"inc":"",
+			"def":"",
+			"work":"Serial.print({0});\n",
+			"loop":""
+		}],
+
+		["w", "Escribir en el puerto Serial texto %s", "serialWrite", "hello",
+		{
+			"setup":"Serial.begin(115200);\n",
+			"inc":"",
+			"def":"",
+			"work":"Serial.println({0});\n",
+			"loop":""
+		}]
+	],
+	"menus": {
+		"digitalLED":["Off","On"],
+		"digital":["HIGH","LOW"],
+		"color":["Rojo","Verde","Azul"],
+		"notes":["C2","D2","E2","F2","G2","A2","B2","C3","D3","E3","F3","G3","A3","B3","C4","D4","E4","F4","G4","A4","B4","C5","D5","E5","F5","G5","A5","B5","C6","D6","E6","F6","G6","A6","B6","C7","D7","E7","F7","G7","A7","B7","C8","D8"],
+		"beats":["Half","Quarter","Eighth","Whole","Double","Zero"],
+		"motorSelec":["Derecho","Izquierdo"],
+		"accionMotor":["Adelante","Atras","Detener"],
+		"pwmLED":["0","50","100","150","255"],
+		"canciones":["Saludo","Encendido","Deteccion","For Eliza","Contento","Enojado","Policia","Sirena","Mision Imposible","Simpsons","Start Wars","Mario Bros","Despacito"],
+		"infrarrojos":["Sensor1","Sensor2"],
+		"robot":["Vennom"]
+	},
+	"values":{
+		"On":1,
+		"Off":0,
+		"Rojo":6,
+		"Verde":5,
+		"Azul":3,
+		"HIGH":1,
+		"LOW":0,
+		"tone":34,
+		"B0":31,"C1":33,"D1":37,"E1":41,"F1":44,"G1":49,"A1":55,"B1":62,
+			"C2":65,"D2":73,"E2":82,"F2":87,"G2":98,"A2":110,"B2":123,
+			"C3":131,"D3":147,"E3":165,"F3":175,"G3":196,"A3":220,"B3":247,
+			"C4":262,"D4":294,"E4":330,"F4":349,"G4":392,"A4":440,"B4":494,
+			"C5":523,"D5":587,"E5":659,"F5":698,"G5":784,"A5":880,"B5":988,
+			"C6":1047,"D6":1175,"E6":1319,"F6":1397,"G6":1568,"A6":1760,"B6":1976,
+			"C7":2093,"D7":2349,"E7":2637,"F7":2794,"G7":3136,"A7":3520,"B7":3951,
+			"C8":4186,"D8":4699,
+		"Half":500,"Quarter":250,"Eighth":125,"Whole":1000,"Double":2000,"Zero":0,
+		"Derecho":"derecho",
+		"Izquierdo":"izquierdo",
+		"Adelante":"adelante",
+		"Atras":"atras",
+		"Detener":"detener",
+		"a":0,
+		"b":0,
+		"Sensor1":1,
+		"Sensor2":7,
+		"Vennom":"v1~",
+		
+		"Saludo":"saludo",
+		"Encendido":"encendido",
+		"Deteccion":"deteccion",
+		"For Eliza":"mozart",
+		"Contento":"contento",
+		"Enojado":"enojado",
+		"Policia":"policia",
+		"Sirena":"sirena",
+		"Mision Imposible":"mision",
+		"Simpsons":"simpsons",
+		"Start Wars":"starWars",
+		"Mario Bros":"mario",
+		"Despacito":"despacito"		
+	},
+	"translators":{
+	}
+}

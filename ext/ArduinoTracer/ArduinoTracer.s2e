@@ -1,0 +1,28 @@
+{	"extensionName": "ArduinoTracer",
+        "description": "A extention for arduino controlling tracer",
+        "version" : "1.1.6",
+        "author" : "MIN.HAN",
+        "homepage": "http://www.mblock.cc/posts/create-extensions-for-mblock",
+	"sort":1,
+	"extensionPort": 0,
+	"firmware":"1.1.103",
+	"javascriptURL":"js/arduinotracer.js",
+	"blockSpecs": [
+		["h","Arduino Program","runArduino",{"encode":"","setup":"pinMode(7,OUTPUT);\ndigitalWrite(7,HIGH);\n","inc":"","def":"","loop":""}],
+                		
+		["w", "set motor%d.motorPort speed %d.motorvalue","runMotor", "L", 0,
+		{"encode":"{d0}{d1}","setup":"pinMode({0}-1,OUTPUT);\npinMode({0},OUTPUT);\n","inc":"","def":"","work":"","loop":"digitalWrite({0}-1,{1}>=0?LOW:HIGH);\nanalogWrite({0},{1});\n"}],	
+			
+	],
+	"menus": {
+		"digital":["HIGH","LOW"],
+		"motorPort":["L","R"],
+		"motorvalue":[255,100,50,0,-50,-100,-255]
+	},
+	"values":{
+		"HIGH":1,"LOW":0,
+		"L":9,"R":11
+	},
+	"translators":{
+	}
+}
