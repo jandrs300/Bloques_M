@@ -6,7 +6,6 @@ El objetivo de esta práctica es realizar o simular con los LEDs de nuestra *pla
 www.insani-loja.com
 
 | Autor de la práctica |
-| ----- | ---- |
 | Juan Andrés (INSANI) |
 
 
