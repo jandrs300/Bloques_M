@@ -4,6 +4,7 @@ El objetivo de esta práctica es realizar o simular con los LEDs de nuestra *pla
 
 
 www.insani-loja.com
+.
 Autor de la práctica
 Juan Andrés (INSANI)
 
@@ -14,7 +15,7 @@ Juan Andrés (INSANI)
 ## Programación en MBLOCK
 Al ejecutar el código que vemos a continuación tendremos el resultado de la práctica.
 
-![programa en mblock luces LEDS Arduino](https://github.com/jandrs300/ARDUINO/blob/master/lobo.jpg)
+![programa en mblock luces LEDS Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_policia/luces_policia.PNG)
 
 
 ## Programación en Arduino
@@ -23,3 +24,22 @@ Al ejecutar el código que vemos a continuación tendremos el resultado de la pr
 - Esperamos 200 milisegundos
 - Desactivamos el pin 3 (LED Azul) y activamos el pin 6 (LED Rojo)
 - Esperamos 200 milisegundos
+
+```
+void setup(){
+    
+    pinMode(3,OUTPUT);
+    pinMode(6,OUTPUT);
+}
+
+void loop(){
+    
+    digitalWrite(3,1);
+    digitalWrite(6,0);
+    delay(200);
+    digitalWrite(3,0);
+    digitalWrite(6,1);
+    delay(200);
+}
+```
+
