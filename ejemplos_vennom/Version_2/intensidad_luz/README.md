@@ -22,7 +22,7 @@ Al ejecutar el código que vemos a continuación tendremos el resultado de la pr
 
 
 ## Programación en Arduino
-Para el control de intensidad de luz usaremos la función *analogWrite()* mas información [funcion analogWrite()](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/)
+Para el control de intensidad de luz usaremos la función *analogWrite()* más información [función analogWrite()](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/)
  
 - Primero declaramos el pin 5 como salida.
 - Dentro de un bucle *loop()*
