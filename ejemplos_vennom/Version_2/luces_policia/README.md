@@ -13,6 +13,8 @@ www.insani-loja.com
 - Placa Vennom V2.
 - Cable USB - miniUSB
 
+![Placa de programacion Vennom](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/Guerra_Galaxias_buzzer/guerra%20de%20las%20galaxias.png)
+
 ## Programación en MBLOCK
 Al ejecutar el código que vemos a continuación tendremos el resultado de la práctica.
 

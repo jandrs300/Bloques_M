@@ -42,5 +42,4 @@ void loop(){
     tone(11,349,500); // write to buzzer
     delay(500);
     delay(500);
-
 }
