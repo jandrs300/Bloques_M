@@ -18,7 +18,7 @@ www.insani-loja.com
 ## Programación en MBLOCK
 Al ejecutar el código que vemos a continuación tendremos el resultado de la práctica.
 
-![programa en mblock luces LEDS Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_policia/luces_policia.PNG)
+![programa en mblock luces LEDS Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_alternas/luces_alternas.png)
 
 
 ## Programación en Arduino
