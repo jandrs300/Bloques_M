@@ -24,7 +24,7 @@ www.insani-loja.com
 ## Esquema eléctrico
 Se conecta el cable negro (negativo) del LED al pin GND de la placa de arduino y el cable verde  al pin  5 de la placa de arduino.
 
-![Esquema de conexión](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/Guerra_Galaxias_buzzer/guerra_galaxias_f.png)
+![Esquema de conexión](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/intensidad_luz/intensidad_luz_f.png)
 
 
 
