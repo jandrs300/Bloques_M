@@ -12,6 +12,7 @@ www.insani-loja.com
 ## Materiales
 - Placa Vennom V2.
 - Cable USB - miniUSB
+
 ![Placa de programacion Vennom](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/placa-version2.png)
 
 *En caso de no tener placa Vennom los materiales son:*
@@ -19,8 +20,10 @@ www.insani-loja.com
 - 1 Protoboard
 - 1 Zumbador o Buzzer
 
+
 ## Esquema eléctrico
 Se conecta el cable negro (negativo) del zumbador o buzzer al pin GND de la placa de arduino y el cable rojo (positivo) al pin PWM 11 de la placa de arduino.
+
 ![Esquema de conexion ](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/Guerra_Galaxias_buzzer/guerra_galaxias_f.png)
 
 
