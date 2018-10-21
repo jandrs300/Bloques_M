@@ -15,6 +15,19 @@ www.insani-loja.com
 
 ![Placa de programacion Vennom](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/placa-version2.png)
 
+*En caso de no tener placa Vennom los materiales son:*
+- 1 Arduino
+- 1 Protoboard
+- 1 LED RGB Cátodo Común
+
+
+## Esquema eléctrico
+Se conecta el cable negro (negativo) del LED al pin GND de la placa de arduino y el cable verde  al pin  5 de la placa de arduino.
+
+![Esquema de conexión](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/Guerra_Galaxias_buzzer/guerra_galaxias_f.png)
+
+
+
 ## Programación en MBLOCK
 Al ejecutar el código que vemos a continuación tendremos el resultado de la práctica.
 
