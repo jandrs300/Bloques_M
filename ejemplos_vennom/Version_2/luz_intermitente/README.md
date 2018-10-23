@@ -15,6 +15,13 @@ www.insani-loja.com
 
 ![Placa de programacion Vennom](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/placa-version2.png)
 
+
+## Simulación
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/0KE5W8YT1tC?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">< /iframe>
+
+
+
 ## Programación en MBLOCK
 Al ejecutar el código que vemos a continuación tendremos el resultado de la práctica.
 
