@@ -15,22 +15,31 @@ www.insani-loja.com
 
 ![Placa de programacion Vennom](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/placa-version2.png)
 
+
+*En caso de no tener placa Vennom los materiales son:*
+- 1 Arduino
+- 1 Protoboard
+- 1 LED RGB Cátodo Común
+- 1 Resistor de 220 Ohm
+
+
+## Esquema eléctrico
+
+![Placa arduino encender LED RGB catado](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_policia/luces_policia_c.PNG)
+
+
+
 ## Programación en MBLOCK
 Al ejecutar el código que vemos a continuación tendremos el resultado de la práctica.
 
 ![programa en mblock luces LEDS Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_policia/luces_policia.PNG)
 
 
+
 ## Simulación
 Para la simulación utilizamos un arduino UNO, es **igual** al arduino nano, la única diferencia es el tamaño, los pines y demás son los mismos.
 
-A continuación podremos ver la simulación del programa realizado.  [Clic para ver la simulación](https://www.tinkercad.com/things/fB08URl8DF0)
-
-## Esquema eléctrico
-
-![Placa arduino encender LED RGB catado](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_intermitentes_x5/luces_intermitentes_x5_c.PNG)
-
-
+A continuación podremos ver la simulación del programa realizado.  [Clic para ver la simulación]( https://www.tinkercad.com/things/fB08URl8DF0 )
 
 
 ## Programación en Arduino
