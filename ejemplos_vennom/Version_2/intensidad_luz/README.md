@@ -34,6 +34,15 @@ Al ejecutar el código que vemos a continuación tendremos el resultado de la pr
 ![programa en mblock intensidad de LEDS Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/intensidad_luz/intensidad%20de%20luz.png)
 
 
+ ## Simulación
+Para la simulación utilizamos un arduino UNO, es **igual** al arduino nano, la única diferencia es el tamaño, los pines y demás son los mismos.
+
+A continuación podremos ver la simulación del programa realizado.  [Clic para ver la simulación](https://www.tinkercad.com/things/d2fQJsbFrZA )
+
+
+
+ 
+
 ## Programación en Arduino
 Para el control de intensidad de luz usaremos la función *analogWrite()* más información [función analogWrite()](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/)
  
