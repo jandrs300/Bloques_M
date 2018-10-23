@@ -20,17 +20,17 @@ www.insani-loja.com
 - 1 Protoboard
 - 1 LED RGB Cátodo Común
 
+## Esquema eléctrico
+Se conecta el cable negro (negativo) del LED al pin GND de la placa de arduino y el cable verde  al pin  5 de la placa de arduino.
+
+![Esquema de conexión](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/intensidad_luz/intensidad_luz_f.png)
+
+
 
 ## Programación en MBLOCK
 Al ejecutar el código que vemos a continuación tendremos el resultado de la práctica.
 
 ![programa en mblock intensidad de LEDS Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/intensidad_luz/intensidad%20de%20luz.png)
-
-
-## Esquema eléctrico
-Se conecta el cable negro (negativo) del LED al pin GND de la placa de arduino y el cable verde  al pin  5 de la placa de arduino.
-
-![Esquema de conexión](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/intensidad_luz/intensidad_luz_f.png)
 
 
 ## Simulación
