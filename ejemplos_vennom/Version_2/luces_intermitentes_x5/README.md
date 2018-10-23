@@ -27,6 +27,8 @@ www.insani-loja.com
 - 1 LED RGB Cátodo Común
 - 1 Resistor de 220 Ohm
 
+![Placa arduino encender LED RGB catado](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/placa-version2.png)
+
 
 ## Programación en MBLOCK
 Al ejecutar el código que vemos a continuación tendremos el resultado de la práctica.
