@@ -24,7 +24,7 @@ www.insani-loja.com
 
 ## Esquema eléctrico
 
-![Placa arduino encender LED RGB catado](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_intermitentes_x5/luces_intermitentes_x5_c.PNG)
+![Placa arduino encender LED RGB catado](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luz_intermitente/luz_intermitente_c.PNG)
 
 
 ## Programación en MBLOCK
