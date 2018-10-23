@@ -34,6 +34,14 @@ Al ejecutar el código que vemos a continuación tendremos el resultado de la pr
 ![programa en mblock luces Aleatorias LEDS Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_aleatorias/luces_aleatorias.png)
 
 
+
+## Simulación
+Para la simulación utilizamos un arduino UNO, es **igual** al arduino nano, la única diferencia es el tamaño, los pines y demás son los mismos.
+
+A continuación podremos ver la simulación del programa realizado.  [Clic para ver la simulación]( https://www.tinkercad.com/things/bT6OARtBleP )
+
+
+ 
 ## Programación en Arduino
 Para la correcta realización de la práctica nos ayudaremos de la función *random()*, la misma que generea números aleatorios, esto con la finalidad de que siempre tengamos un número diferente y lograr diferentes intensidades de iluminación y así al mezclarse las intensidades obtener varios tonos de colores.
 Para más información sobre la [función random()](https://www.arduino.cc/reference/en/language/functions/random-numbers/random/)
