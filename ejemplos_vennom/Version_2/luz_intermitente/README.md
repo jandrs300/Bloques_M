@@ -23,6 +23,7 @@ Al ejecutar el código que vemos a continuación tendremos el resultado de la pr
 ![programa en mblock luces intermitentes LEDS Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luz_intermitente/luz_intermitente.png)
 
 
+
 ## Programación en Arduino
 - Primero declaramos el pin 3 como salida.
 - Dentro de un bucle *loop()*
@@ -48,3 +49,5 @@ void loop(){
 
 ```
 
+## Actividad Extra
+Realiza un 
