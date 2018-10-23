@@ -15,6 +15,16 @@ www.insani-loja.com
 
 ![Placa de programacion Vennom](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/placa-version2.png)
 
+*En caso de no tener placa Vennom los materiales son:*
+- 1 Arduino
+- 1 Protoboard
+- 1 LED RGB Cátodo Común
+- 1 Resistor de 220 Ohm
+
+
+## Esquema eléctrico
+
+![Placa arduino encender LED RGB catado](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_intermitentes_x5/luces_intermitentes_x5_c.PNG)
 
 
 ## Programación en MBLOCK
@@ -22,6 +32,10 @@ Al ejecutar el código que vemos a continuación tendremos el resultado de la pr
 
 ![programa en mblock luces intermitentes LEDS Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luz_intermitente/luz_intermitente.png)
 
+## Simulación
+Para la simulación utilizamos un arduino UNO, es **igual** al arduino nano, la única diferencia es el tamaño, los pines y demás son los mismos.
+
+A continuación podremos ver la simulación del programa realizado.  [Clic para ver la simulación]( https://www.tinkercad.com/things/fXADVvXwsmi )
 
 
 ## Programación en Arduino
