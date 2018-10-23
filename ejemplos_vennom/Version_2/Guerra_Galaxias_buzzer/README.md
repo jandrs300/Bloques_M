@@ -34,6 +34,13 @@ Al ejecutar el código que vemos a continuación tendremos el resultado de la pr
 ![programa en mblock guerra de las galaxias tonos Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/Guerra_Galaxias_buzzer/guerra%20de%20las%20galaxias.png)
 
 
+## Simulación
+Para la simulación utilizamos un arduino UNO, es **igual** al arduino nano, la única diferencia es el tamaño, los pines y demás son los mismos.
+
+A continuación podremos ver la simulación del programa realizado.  [Clic para ver la simulación]( https://www.tinkercad.com/things/llWRpF47b9w )
+
+
+ 
 ## Programación en Arduino
 - Primero declaramos los pines 11 como salida.
 - La funcion **tone** *genera una onda cuadrada de la frecuencia especificada* en un pin, debemos especificar la duración. Para más información [funciósn tone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/)
