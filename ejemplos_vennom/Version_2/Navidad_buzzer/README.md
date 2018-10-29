@@ -25,6 +25,8 @@ www.insani-loja.com
 
 ## Esquema eléctrico
 
+Se conecta a GND usando un resistor a pin de GND del LED y mediante cables conductores conectamos al pin 3, 5 y 6 al pin del LED RGB (ver imagen).
+
 ![Placa arduino encender LED RGB catado](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/Navidad_buzzer/Navidad_c.PNG)
 
 

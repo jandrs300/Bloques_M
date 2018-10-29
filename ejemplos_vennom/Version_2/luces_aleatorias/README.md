@@ -22,7 +22,8 @@ www.insani-loja.com
 
 
 ## Esquema eléctrico
-Se conecta el cable negro (negativo) del zumbador o buzzer al pin GND de la placa de arduino y el cable rojo (positivo) al pin PWM 11 de la placa de arduino.
+
+Se conecta a GND usando un resistor a pin de GND del LED y mediante cables conductores conectamos al pin 3, 5 y 6 al pin del LED RGB (ver imagen).
 
 ![Esquema de conexion ](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_aleatorias/luces_aleatorias_f.png)
 
