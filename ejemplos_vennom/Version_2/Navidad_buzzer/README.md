@@ -25,13 +25,13 @@ www.insani-loja.com
 
 ## Esquema eléctrico
 
-![Placa arduino encender LED RGB catado](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luz_intermitente/luz_intermitente_c.PNG)
+![Placa arduino encender LED RGB catado](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/Navidad_buzzer/Navidad_c.PNG)
 
 
 ## Programación en MBLOCK
 Al ejecutar el código que vemos a continuación tendremos el resultado de la práctica.
 
-![programa en mblock buzzer tono Jingle Bells Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luz_intermitente/luz_intermitente.png)
+![programa en mblock buzzer tono Jingle Bells Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/Navidad_buzzer/navidad.png)
 
 ## Simulación
 Para la simulación utilizamos un arduino UNO, es **igual** al arduino nano, la única diferencia es el tamaño, los pines y demás son los mismos.
