@@ -32,16 +32,16 @@ www.insani-loja.com
 ![Placa arduino encender LED RGB catado](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_intermitentes_x5/luces_intermitentes_x5_c.PNG)
 
 
-## Simulación
-Para la simulación utilizamos un arduino UNO, es **igual** al arduino nano, la única diferencia es el tamaño, los pines y demás son los mismos.
-
-A continuación podremos ver la simulación del programa realizado.  [Clic para ver la simulación](https://www.tinkercad.com/things/cEBX1utyiVz)
-
-
 ## Programación en MBLOCK
 Al ejecutar el código que vemos a continuación tendremos el resultado de la práctica.
 
 ![programa en mblock luces intermitentes x5 LEDS Arduino](https://github.com/jandrs300/Bloques_M/blob/master/ejemplos_vennom/Version_2/luces_intermitentes_x5/luces_intermitentes_x5.png)
+
+
+## Simulación
+Para la simulación utilizamos un arduino UNO, es **igual** al arduino nano, la única diferencia es el tamaño, los pines y demás son los mismos.
+
+A continuación podremos ver la simulación del programa realizado.  [Clic para ver la simulación](https://www.tinkercad.com/things/cEBX1utyiVz)
 
 
 ## Programación en Arduino

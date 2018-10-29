@@ -63,5 +63,3 @@ void loop(){
 
 ```
 
-## Actividad Extra
-Realiza un 
