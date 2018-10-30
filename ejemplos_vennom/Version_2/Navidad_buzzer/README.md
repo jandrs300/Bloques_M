@@ -44,7 +44,7 @@ A continuación podremos ver la simulación del programa realizado.  [Clic para 
 ## Programación en Arduino
 - Declaramos el pin 3,5 y 6 como salida para los LEDs.
 - Declaramos el pin 11 como salida para el Buzzer o Zumbador.
-- La funcion **tone** *genera una onda cuadrada de la frecuencia especificada* en un pin, debemos especificar la duración. Para más información [funciósn tone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/)
+- La funcion **tone** *genera una onda cuadrada de la frecuencia especificada* en un pin, debemos especificar la duración. Para más información [función tone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/)
 
 
 ```

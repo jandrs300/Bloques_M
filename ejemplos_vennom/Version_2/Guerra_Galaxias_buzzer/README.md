@@ -43,7 +43,7 @@ A continuación podremos ver la simulación del programa realizado.  [Clic para 
  
 ## Programación en Arduino
 - Primero declaramos los pines 11 como salida.
-- La funcion **tone** *genera una onda cuadrada de la frecuencia especificada* en un pin, debemos especificar la duración. Para más información [funciósn tone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/)
+- La funcion **tone** *genera una onda cuadrada de la frecuencia especificada* en un pin, debemos especificar la duración. Para más información [función tone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/)
 
 
 
